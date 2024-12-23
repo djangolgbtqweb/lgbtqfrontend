@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "your_django_project/manage.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "your_django_project/$1"
+      }
+    ],
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "your_django_project.settings"
+    }
+  }
+  
